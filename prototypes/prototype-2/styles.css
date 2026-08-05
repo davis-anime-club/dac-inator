@@ -1,0 +1,280 @@
+body {
+    /* position: relative; */
+    background-color: midnightblue;
+    color: lightcyan;
+    width: 100%;
+    margin: auto;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+header {
+    position: relative;
+    z-index: 2;
+    height: 20vh;
+    background-color: #add8e6;
+    /* width setting on header is unnecessary */
+    /* this width setting adds extra scrolling space horizontally... AND somehow vertically too which I absolutely do not understand why */
+    /* anyway, this width is to be omitted to avoid unnecessary scrolls */
+    /* width: 100%; */
+    text-align: center;
+    color: navy;
+    padding: 15px 5px;
+}
+
+#logo {
+    position: absolute;
+    height: 10vh;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h1 {
+    position: absolute;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 400;
+    width: 95%;
+    margin: 0;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main {
+    max-width: 1000px;
+    max-height: 80%;
+    margin: auto;
+}
+
+section {
+    /* text-align: center; */
+    display: block;
+    position: relative;
+    /* top: 30vh; */
+    max-width: 1000px;
+    width: 90%;
+    /* height: 75vh; */
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    margin: 30px 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+/* .options {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;    
+} */
+
+.options div {
+    /* width: 50%; */
+    /* flex: 1; */
+    /* height: 100px; */
+    /* position: absolute; */
+    /* top: 0; */
+    /* height: 20vh ; */
+    height: 80px;
+    margin: 10px;
+    background-color: lemonchiffon;
+    position: relative;
+    border-radius: 20px;
+}
+
+.options div p {
+    /* text-align: center; */
+    color: darkslateblue;
+    font-size: 18px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.off, .resultOff {
+    /* display: none; */
+    position:absolute;
+    top: -150%;
+}
+
+/* .on, .resultOn {
+    display: block;
+    position: relative;
+    top: 20%;
+} */
+
+.resultOn {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+
+.resultOff {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h3 {
+    font-size: 26px;
+    color: gold;
+}
+
+.resultOff h2, .resultOn h2 {
+    font-weight: 400;
+}
+
+.resultImg {
+    display: block;
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    margin: auto;
+}
+
+#reset {
+    background-color: palegoldenrod;
+    color: darkblue;
+    position: sticky;
+    bottom: 5%;
+    margin-top: 15px;
+    border-radius: 10px;
+    padding: 20px;
+    border: 3px solid midnightblue;
+}
+
+#start {
+    background-color: palegoldenrod;
+    color: darkblue;
+    border: 2px solid midnightblue;
+    border-radius: 10px;
+    padding: 20px;
+    width: 60%;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+#initial h2 {
+    font-weight: 500;
+}
+
+/* tablet size */
+@media screen and (min-width: 600px) and (max-width: 899px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    section h2 {
+        font-size: 28px;
+        margin-top: 50px;
+    }
+ 
+    h3 {
+        font-size: 36px;
+    }
+
+    #start {
+        margin-top: 20px;
+        width: 40%;
+        padding: 50px 20px;
+        max-width: 300px;
+    }
+
+    .options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .resultOn {
+        display: flex;
+    }
+
+    .heading {
+        flex: 1;
+    }
+
+    .side {
+        flex: 2;
+        margin-top: 30px;
+    }
+
+    #reset {
+        font-size: 20px;
+        padding: 20px;
+        border-radius: 20px;
+        max-width: 50%;    
+    }
+}
+
+@media screen and (min-width: 900px) {
+    h1 {
+        font-size:48px;
+    }
+
+    section h2 {
+        font-size: 28px;
+        margin-top: 50px;
+    }
+ 
+    h3 {
+        font-size: 36px;
+    }
+
+    .options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    .options div p {
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    .resultOn {
+        display: flex;
+    }
+
+    .heading {
+        flex: 1;
+    }
+
+    .side {
+        flex: 2;
+        margin-top: 30px;
+    }
+
+    #start {
+        margin-top: 20px;
+        width: 40%;
+        padding: 50px 20px;
+        max-width: 300px;
+        font-size: 36px;
+    }
+
+    #reset {
+        font-size: 20px;
+        padding: 20px;
+        border-radius: 20px;
+        max-width: 50%;    
+    }
+}
+
+@media (hover: hover) {
+    .answer:hover, .answerFinal:hover, #start:hover, #reset:hover {
+        cursor: pointer;
+        background-color: paleturquoise;
+    }
+}
